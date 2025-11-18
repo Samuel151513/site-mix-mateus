@@ -25,14 +25,12 @@
                     <p class="hero-description">
                         Até <span class="highlight">R$ 5.000</span> de limite liberado para compras no Mix Mateus e em qualquer loja do Brasil.
                     </p>
-                    <a href="../2/index.html" style="text-decoration: none;">
-                        <button class="cta-button">
-                            SOLICITAR MEU CARTÃO AGORA
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="9 18 15 12 9 6"></polyline>
-                            </svg>
-                        </button>
-                    </a>
+                    <button class="cta-button" onclick="irParaPagina2()">
+                        SOLICITAR MEU CARTÃO AGORA
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
                 </div>
                 <div class="hero-image">
                     <img src="images/hero-image.png" alt="Clientes felizes com cartão Mix Mateus aprovado">
@@ -244,6 +242,22 @@
     <script>
         function scrollToCTA() {
             document.getElementById('cta-form').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function irParaPagina2() {
+            // Pega o caminho atual do arquivo
+            var currentPath = window.location.pathname;
+            var currentDir = currentPath.substring(0, currentPath.lastIndexOf('/'));
+            
+            // Navega para a pasta 2
+            if (currentPath.includes('/1/')) {
+                // Se estiver na pasta 1, vai para pasta 2
+                window.location.href = '../2/index.html';
+            } else {
+                // Caminho absoluto como fallback
+                var basePath = window.location.origin + window.location.pathname.replace(/\/[^\/]*$/, '');
+                window.location.href = basePath + '/../2/index.html';
+            }
         }
     </script>
 </body>
