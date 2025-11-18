@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Teste de Link</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 50px;
+            background: #f0f0f0;
+        }
+        .cta-button {
+            background: linear-gradient(to right, #E63946, #D62839);
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .info {
+            margin: 20px 0;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de Navegação</h1>
+    
+    <div class="info">
+        <h2>Estrutura de pastas:</h2>
+        <pre>
+site-mix-mateus-main/
+├── 1/
+│   └── index.html  <-- VOCÊ ESTÁ AQUI
+└── 2/
+    └── index.html  <-- DESTINO
+        </pre>
+    </div>
+    
+    <div class="info">
+        <h2>Teste o link:</h2>
+        <a href="../2/index.html" class="cta-button" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none;">
+            IR PARA PÁGINA 2 →
+        </a>
+    </div>
+    
+    <div class="info">
+        <p><strong>O que acontece quando você clica:</strong></p>
+        <ul>
+            <li>href="../2/index.html" significa: "volte uma pasta (..) e entre na pasta 2"</li>
+            <li>De: site-mix-mateus-main/1/index.html</li>
+            <li>Para: site-mix-mateus-main/2/index.html</li>
+        </ul>
+    </div>
+    
+</body>
+</html>
